@@ -2,14 +2,15 @@ crumb :root do
   link "Home", root_path
 end
 
-# crumb :projects do
-#   link "Projects", projects_path
-# end
+crumb :tweets do
+  link "ツイート一覧", tweets_index_path
+  parent :root
+end
 
-# crumb :project do |project|
-#   link project.name, project_path(project)
-#   parent :projects
-# end
+ crumb :contacts do
+   link "コンタクト", contacts_index_path
+   parent :tweets
+ end
 
 # crumb :project_issues do |project|
 #   link "Issues", project_issues_path(project)
